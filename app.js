@@ -13,7 +13,7 @@ const ejs = require("ejs");
 const _ = require('lodash');
 const mongoose = require('mongoose');
 
-mongoose.connect("mongodb://localhost:27017/konesi-po",{useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect("mongodb+srv://abhijeeth:test1234@cluster0-8qxkw.mongodb.net/konesi-po",{useNewUrlParser: true, useUnifiedTopology: true});
 
 app.use(bodyParser.urlencoded({extended : true}));
 app.set('view engine', 'ejs');
@@ -156,6 +156,7 @@ app.post("/additem",function(req,res){
         }
       });
       console.log("Item details updated");
+      res.redirect("/home/owner@gmail.com");
     }
     else{
       console.log(err);
@@ -168,9 +169,9 @@ app.post("/additem",function(req,res){
       });
       item.save();
       console.log("new item added");
+      res.redirect("/home/owner@gmail.com");
     }
   });
-  res.redirect("/home/owner@gmail.com");
 });
 
 app.post("/:email/cart",function(req,res){
