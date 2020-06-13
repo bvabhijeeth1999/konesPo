@@ -192,7 +192,7 @@ app.post("/:email/cart",function(req,res){
       console.log("printing wanted result");
       console.log(result.quantity);
       hasquantity = Number(hasquantity);
-      if(hasquantity < Number(quantityNeeded)){
+      if(hasquantity < Number(quantityNeeded) || (Number(quantityNeeded) <= 0)){
         console.log("you have enterted an invalid quantity ... please try again!!");
         res.redirect("/home/" + email);
       }
