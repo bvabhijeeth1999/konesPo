@@ -1,0 +1,75 @@
+.container {
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+
+h4 {
+  margin-top : 20px;
+  margin-bottom : 15px;
+}
+
+body {
+  background-color: #dbc6eb;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 20px;
+    font-size: 12px;
+    letter-spacing: 5px;
+}
+.navbar-nav  li a:hover {
+    color: #1abc9c !important;
+}
+
+.card-modify {
+  display: inline-block;
+  margin: 1rem;
+}
+
+.input-modi {
+  margin-left: 10px;
+  width: 100px;
+  display: inline-block;
+}
+
+.btn-modi {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  margin-left: 60px;
+}
+
+.footer-padding {
+	padding-bottom: 60px;
+}
+
+.footer {
+	position: fixed;
+	text-align: center;
+	bottom: 0;
+	width: 100%;
+	height: 65px;
+	background-color: #f4f4f4;
+}
+
+.footer p {
+	margin-top: 22px;
+	font-size: 1rem;
+  color: #1b6ca8;
+}
+
+.full {
+  width: 100%;
+}
+
+p {
+    word-break: break-all;
+    white-space: normal;
+}

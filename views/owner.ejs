@@ -1,0 +1,59 @@
+<!doctype HTML>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Konespo</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="icon" href="/favicons/favicon.ico">
+
+  <!-- fontawesome -->
+  <script src="https://kit.fontawesome.com/42b63e661f.js" crossorigin="anonymous"></script>
+
+  <!-- bootstrap navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <div class="navbar-header">
+        <p class="navbar-brand"><i class="fas fa-shopping-cart"></i>KONESPO</p>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <!-- 6 -->
+        <li id="home"><a class="nav-item nav-link" href="/home/<%= customerEmail %>">HOME</a></li>
+        <li id="orders"><a class="nav-item nav-link" href="/additem">ADD ITEM</a></li>
+        <li id="log-in"><a class="nav-item nav-link" href="/">LOG OUT</a></li>
+      </ul>
+    </div>
+  </nav>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Hello customers</h1>
+    <!-- Now here we need to display the items from the itemArray -->
+
+
+
+    <h4>You are logged in as <%= customerEmail %> </h4>
+    <% itemArray.forEach(function(element){ %>
+    <div class="card card-modify" style="width: 18rem;">
+      <img src="<%= element.url %>" class="card-img-top" alt="item-image" width="150" height="250">
+      <div class="card-body">
+        <h5 class="card-title"><%= element.name %></h5>
+        <p class="card-text">Price : <%= element.price %></p>
+        <p class="card-text">Quantity Available : <%= element.quantity %></p>
+      </div>
+    </div>
+    <% }); %>
+
+
+
+  </div>
+  <div class="footer-padding"></div>
+  <div class="footer">
+    <p>Made with ❤️ by Konespo Team</p>
+  </div>
+</body>
+
+</html>
